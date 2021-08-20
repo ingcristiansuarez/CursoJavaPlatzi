@@ -4,14 +4,17 @@ public class Doctor {
     String speciality;
 
     Doctor(){
-        System.out.println("Contruyendo el objeto Doctor");
+        //System.out.println("Contruyendo el objeto Doctor");
+        //id++;
+    }
+
+    Doctor (String name, String speciality){
+        System.out.println("El nombre del doctor es "+name);
+        this.name = name;
+        this.speciality = speciality;
         id++;
     }
 
-    Doctor (String name){
-        System.out.println("El nombre del doctor es "+name);
-        id++;
-    }
     //Comportamientos
     public void showName(){
         System.out.println(name);

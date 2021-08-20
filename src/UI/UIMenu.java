@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class UIMenu {
 
+    public static final String[] MONTHS = {"ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"};
 
     public static void showMenu(){
         System.out.println("Welcome to My Appointments");
@@ -51,6 +52,9 @@ public class UIMenu {
             switch (response){
                 case 1:
                     System.out.println("::Book an appointment");
+                    for (int i = 0; i < 4; i++) {
+                        System.out.println(i + ". "+MONTHS[i]);
+                    }
                     break;
                 case 2:
                     System.out.println("::My appointments");
@@ -58,6 +62,8 @@ public class UIMenu {
                 case 0:
                     showMenu();
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + response);
             }
         }while (response != 0);
     }
