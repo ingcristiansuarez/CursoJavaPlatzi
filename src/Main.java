@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Date;
 
 import static UI.UIMenu.*;
 
@@ -18,10 +19,16 @@ public class Main {
         //showMenu();
 
         Doctor myDoctor = new Doctor("Doctor Hiber","Cardiologia");
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.speciality);
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "6pm");
+        myDoctor.addAvailableAppointment(new Date(), "10am");
+        myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        Patient patient = new Patient("Cosme Fulanito", "cosme@gmail.com");
+        for(Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointmets()){
+            System.out.println(aA.getDate() + " " + aA.getTime());
+        }
+
+        //Patient patient = new Patient("Cosme Fulanito", "cosme@gmail.com");
 
 
 
