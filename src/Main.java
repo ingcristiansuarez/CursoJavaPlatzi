@@ -18,17 +18,25 @@ public class Main {
 */
         //showMenu();
 
-        Doctor myDoctor = new Doctor("Doctor Hiber","Cardiologia");
+        Doctor myDoctor = new Doctor("Doctor Hiber","dochiber@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "6pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
 
+        System.out.println(myDoctor);
+
+        /*
         for(Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointmets()){
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
-
+*/
         //Patient patient = new Patient("Cosme Fulanito", "cosme@gmail.com");
+
+        System.out.println();
+        System.out.println();
+        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
+        System.out.println(patient);
 
 
 

@@ -1,9 +1,6 @@
-public class Patient {
+public class Patient extends User {
     // attributes
-    private String name;
-    private String email;
-    private String address;
-    private String phoneNumber;
+
     private String birthday;
     private double weight;
     private double height;
@@ -11,44 +8,7 @@ public class Patient {
 
     //constructor
     Patient (String name, String email){
-        this.name = name;
-        this.email = email;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getphoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setphoneNumber(String phoneNumber) {
-        if (phoneNumber.length() > 8){
-            System.out.println("DEbe ser menor a 8 digitos");
-        } else {
-            this.phoneNumber = phoneNumber;
-        }
+        super(name,email);
     }
 
     public String getBirthday() {
@@ -81,5 +41,10 @@ public class Patient {
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nAge: " + birthday + "\n Weight: " +getWeight()+ "\n Height"+getHeight()+"\nBlood"+blood;
     }
 }
