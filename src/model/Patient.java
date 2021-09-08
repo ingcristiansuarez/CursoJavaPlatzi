@@ -1,3 +1,5 @@
+package model;
+
 public class Patient extends User {
     // attributes
 
@@ -7,7 +9,7 @@ public class Patient extends User {
     private String blood;
 
     //constructor
-    Patient (String name, String email){
+    public Patient (String name, String email){
         super(name,email);
     }
 

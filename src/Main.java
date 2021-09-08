@@ -1,24 +1,24 @@
-import java.util.Arrays;
-import java.util.Date;
+import model.Doctor;
+import model.Patient;
 
-import static UI.UIMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void  main (String[] args){
-       /* Doctor myDoctor = new Doctor("Doctor Hiber");
+       /* model.Doctor myDoctor = new model.Doctor("model.Doctor Hiber");
         myDoctor.name = "Dcotor Hiber";
         myDoctor.showName();
         myDoctor.showId();
-        System.out.println(Doctor.id);
+        System.out.println(model.Doctor.id);
 
-        //Doctor.id++;
-        Doctor myDoctorAnn = new Doctor();
+        //model.Doctor.id++;
+        model.Doctor myDoctorAnn = new model.Doctor();
         myDoctorAnn.showId();
-        System.out.println(Doctor.id);
+        System.out.println(model.Doctor.id);
 */
         //showMenu();
 
-        Doctor myDoctor = new Doctor("Doctor Hiber","dochiber@gmail.com");
+        Doctor myDoctor = new Doctor("model.Doctor Hiber","dochiber@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "6pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
@@ -27,11 +27,11 @@ public class Main {
         System.out.println(myDoctor);
 
         /*
-        for(Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointmets()){
+        for(model.Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointmets()){
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
 */
-        //Patient patient = new Patient("Cosme Fulanito", "cosme@gmail.com");
+        //model.Patient patient = new model.Patient("Cosme Fulanito", "cosme@gmail.com");
 
         System.out.println();
         System.out.println();
